@@ -9,8 +9,7 @@ else
     echo "exist!"
 fi
 
-if ! -f nginx.tmpl 
-then
+if [ ! -f nginx.tmpl ]; then
     echo "Downloading nginx.tmpl"
     curl https://raw.githubusercontent.com/jwilder/nginx-proxy/master/nginx.tmpl > nginx.tmpl
 fi
